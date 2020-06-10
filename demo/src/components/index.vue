@@ -20,6 +20,7 @@
           <input
             type="text"
             v-model="inputCen1"
+            style="outline: none;"
             v-if="isShow || CIndex1 === index"
           />
           <p v-else>{{ item }}</p>
@@ -48,6 +49,7 @@
         <li class="underwayLi">
           <input
             type="text"
+            style="outline: none;"
             v-model="inputCen2"
             v-if="isShow || CIndex2 === index"
           />
