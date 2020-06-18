@@ -69,10 +69,12 @@
         </li>
       </ul>
     </div>
+    <Timer color="pink" @end="endfn"></Timer>
   </div>
 </template>
 
 <script>
+import Timer from "@/components/time.vue";
 export default {
   data() {
     return {
@@ -88,7 +90,14 @@ export default {
       haveFinishedNumber: 0 // 已经完成的数量
     };
   },
+  components: {
+    Timer
+  },
   methods: {
+    //倒计时
+    endfn() {
+      console.log("倒计时结束了！！！");
+    },
     // 回车事件
     onSubmit() {
       if (this.textCen === "" || this.textCen === null) {
